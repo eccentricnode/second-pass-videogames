@@ -15,7 +15,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@second-pass/material": ["libs/material/src/index.ts"],
+      "@second-pass/core-data": ["libs/core-data/src/index.ts"],
+      "@second-pass/core-state": ["libs/core-state/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
