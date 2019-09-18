@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-content>
+        <h3 subheader>Game's</h3>
+        <mat-list *ngIf="games.length; else elseBlock">
+            <mat-list-item *ngFor="let game of games" class="mat-list-option"
+                (click)="select(game)">
+                <h4 mat-line>Name: {{game.name}}</h4>
+                <button mat-mini-fab *ngIf="!readonly" (click)="remove(game);$event.stopImmediatePropagagtion()">
+                    <mat-icon>clear</mat-icon>
+                </button>
+            </mat-list-item>
+        </mat-list>
+        <ng-template #elseBlock>
+            <div class="spinner">
+                <mat-spinner mode="indeterminate"></mat-spinner>
+            </div>
+        </ng-template>
+    </mat-card-content>
+</mat-card>
