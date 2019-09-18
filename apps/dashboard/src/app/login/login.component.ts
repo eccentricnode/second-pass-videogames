@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
       this.verifiedUser.password === password;
 
     if (this.form.valid && verifiedUser) {
-      this.router.navigateByUrl('drinks');
+      this.router.navigateByUrl('games');
       this.authService.setToken(username);
       this.notifyService.notify(`Welcome ${username}!`, `Oh Yeah!`);
     }
